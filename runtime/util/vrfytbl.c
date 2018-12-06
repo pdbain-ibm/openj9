@@ -226,8 +226,13 @@ const U_16 J9JavaBytecodeVerificationTable[] = {
 		0x0E85 /* JBgotow - 200 */,
 		0x1700 /* JBunimplemented - 201 */,
 		0x1700 /* JBbreakpoint - 202 */,
+#ifdef PDB_DEBUG
 		0x1200 /* JBdefaultvalue = 203 */,
 		0x1000 /* JBwithfield = 204 */,
+#else
+		0x1700 /* JBunimplemented - 205 */,
+		0x1700 /* JBunimplemented - 206 */,
+#endif
 		0x1700 /* JBunimplemented - 205 */,
 		0x1700 /* JBunimplemented - 206 */,
 		0x1700 /* JBunimplemented - 207 */,

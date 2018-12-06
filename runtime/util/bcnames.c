@@ -226,8 +226,13 @@ const char * const JavaBCNames[] = {
 "JBgotow" /* 200 */,
 "JBunimplemented" /* 201 */,
 "JBbreakpoint" /* 202 */,
+#ifdef PDB_DEBUG
 "JBdefaultvalue" /* 203 */,
 "JBwithfield" /* 204 */,
+#else
+"JBunimplemented" /* 203 */,
+"JBunimplemented" /* 204 */,
+#endif
 "JBunimplemented" /* 205 */,
 "JBunimplemented" /* 206 */,
 "JBunimplemented" /* 207 */,

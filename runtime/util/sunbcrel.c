@@ -225,8 +225,13 @@ const unsigned char sunJavaByteCodeRelocation[] = {
 0x0D /* JBgotow = 200 */ ,
 0x0D /* JBjsrw = 201 */ ,
 0x01 /* JBbreakpoint = 202 */ ,
+#ifdef PDB_DEBUG
 0x01 /* JBdefaultvalue = 203 */ ,
 0x0B /* JBwithfield = 204 */ ,
+#else
+0x01 /* JBunimplemented = 205 */ ,
+0x01 /* JBunimplemented = 206 */ ,
+#endif
 0x01 /* JBunimplemented = 205 */ ,
 0x01 /* JBunimplemented = 206 */ ,
 0x01 /* JBunimplemented = 207 */ ,

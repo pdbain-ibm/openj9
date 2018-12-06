@@ -225,8 +225,13 @@ const unsigned char sunJavaInstructionSizeTable[] = {
 0x05 /* JBgotow = 200 = 0xC8 */,
 0x05 /* JBjsrw = 201 = 0xC9 */,
 0x01 /* JBbreakpoint = 202 = 0xCA */,
+#ifdef PDB_DEBUG
 0x01 /* JBdefaultvalue = 203 = 0xCB */ ,
 0x03 /* JBwithfield = 204 = 0xCC */ ,
+#else
+0x00 /* JBunimplemented = 205 = 0xCD */,
+0x00 /* JBunimplemented = 206 = 0xCE */,
+#endif
 0x00 /* JBunimplemented = 205 = 0xCD */,
 0x00 /* JBunimplemented = 206 = 0xCE */,
 0x00 /* JBunimplemented = 207 = 0xCF */,

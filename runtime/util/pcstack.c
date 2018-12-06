@@ -226,8 +226,13 @@ const unsigned char J9JavaInstructionSizeAndBranchActionTable[] = {
 0x25 /* JBgotow = 200 */,
 0x00 /* JBunimplemented = 201 */,
 0x71 /* JBbreakpoint = 202 */,
+#ifdef PDB_DEBUG
 0x01 /* JBdefaultvalue = 203 */ ,
 0x03 /* JBwithfield = 203 */ ,
+#else
+0x00 /* JBunimplemented = 203 */,
+0x00 /* JBunimplemented = 204 */,
+#endif
 0x00 /* JBunimplemented = 205 */,
 0x00 /* JBunimplemented = 206 */,
 0x00 /* JBunimplemented = 207 */,
@@ -491,8 +496,13 @@ const unsigned char JavaStackActionTable[] = {
 0x00 /* JBgotow = 200  -- pops: 0 pushes: 0*/ ,
 0x00 /* JBunimplemented = 201  -- pops: 0 pushes: 0*/ ,
 0x00 /* JBbreakpoint = 202  -- pops: 0 pushes: 0*/ ,
+#ifdef PDB_DEBUG
 0x01 /* JBdefaultvalue = 203 -- pops: 0 pushes: 1*/ ,
 0x80 /* JBwithfield = 204  -- pops: 0 pushes: 0*/ ,
+#else
+0x00 /* JBunimplemented = 203  -- pops: 0 pushes: 0*/ ,
+0x00 /* JBunimplemented = 204  -- pops: 0 pushes: 0*/ ,
+#endif
 0x00 /* JBunimplemented = 205  -- pops: 0 pushes: 0*/ ,
 0x00 /* JBunimplemented = 206  -- pops: 0 pushes: 0*/ ,
 0x00 /* JBunimplemented = 207  -- pops: 0 pushes: 0*/ ,
@@ -759,8 +769,13 @@ const unsigned char J9BytecodeSlotUseTable[] = {
 	0x0 /* JBgotow (16rC8) */,
 	0x0 /* JBunimplemented (16rC9) */,
 	0x0 /* JBbreakpoint (16rCA) */,
+#ifdef PDB_DEBUG
 	0x0 /* JBdefaultvalue (16rCB) */ ,
 	0x0 /* JBwithfield (16rCC) */ ,
+#else
+	0x0 /* JBunimplemented (16rCD) */,
+	0x0 /* JBunimplemented (16rCE) */,
+#endif
 	0x0 /* JBunimplemented (16rCD) */,
 	0x0 /* JBunimplemented (16rCE) */,
 	0x0 /* JBunimplemented (16rCF) */,

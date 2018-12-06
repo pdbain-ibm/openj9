@@ -8358,6 +8358,7 @@ public:
 		JUMP_TABLE_ENTRY(JBdefaultvalue), /* 203 */
 		JUMP_TABLE_ENTRY(JBwithfield), /* 204 */
 #else /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
+PDB_DEBUG
 		JUMP_TABLE_ENTRY(JBunimplemented), /* 203 */
 		JUMP_TABLE_ENTRY(JBunimplemented), /* 204 */
 #endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
