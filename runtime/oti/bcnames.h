@@ -240,9 +240,9 @@ extern J9_CDATA char * const sunJavaBCNames[];
 #define JBfstorew 210
 #define JBdstorew 211
 #define JBastorew 212
-#define JBiincw 213
-#define JBaload0getfield 215
-#define JBnewdup 216
+#define JBiincw 215
+#define JBaload0getfield 216
+#define JBnewdup 217
 #if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
 #define JBdefaultvalue 224
 #define JBwithfield 226
