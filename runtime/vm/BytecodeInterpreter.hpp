@@ -8354,8 +8354,8 @@ public:
 #else /* DEBUG_VERSION */
 		JUMP_TABLE_ENTRY(JBunimplemented),
 #endif /* DEBUG_VERSION */
-		JUMP_TABLE_ENTRY(JBiloadw),
-		JUMP_TABLE_ENTRY(JBlloadw),
+		JUMP_TABLE_ENTRY(JBunimplemented),
+		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBfloadw),
 		JUMP_TABLE_ENTRY(JBdloadw),
 		JUMP_TABLE_ENTRY(JBaloadw),
@@ -8364,9 +8364,9 @@ public:
 		JUMP_TABLE_ENTRY(JBfstorew),
 		JUMP_TABLE_ENTRY(JBdstorew),
 		JUMP_TABLE_ENTRY(JBastorew),
+		JUMP_TABLE_ENTRY(JBiloadw),
+		JUMP_TABLE_ENTRY(JBlloadw),
 		JUMP_TABLE_ENTRY(JBiincw),
-		JUMP_TABLE_ENTRY(JBunimplemented),
-		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBaload0getfield),
 		JUMP_TABLE_ENTRY(JBnewdup),
 		JUMP_TABLE_ENTRY(JBunimplemented),

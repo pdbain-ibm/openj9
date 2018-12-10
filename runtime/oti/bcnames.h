@@ -230,8 +230,6 @@ extern J9_CDATA char * const sunJavaBCNames[];
 #define JBifnonnull 199
 #define JBgotow 200
 #define JBbreakpoint 202
-#define JBiloadw 203
-#define JBlloadw 204
 #define JBfloadw 205
 #define JBdloadw 206
 #define JBaloadw 207
@@ -240,6 +238,8 @@ extern J9_CDATA char * const sunJavaBCNames[];
 #define JBfstorew 210
 #define JBdstorew 211
 #define JBastorew 212
+#define JBiloadw 213
+#define JBlloadw 214
 #define JBiincw 215
 #define JBaload0getfield 216
 #define JBnewdup 217
