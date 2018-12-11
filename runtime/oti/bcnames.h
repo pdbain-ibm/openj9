@@ -230,6 +230,8 @@ extern J9_CDATA char * const sunJavaBCNames[];
 #define JBifnonnull 199
 #define JBgotow 200
 #define JBbreakpoint 202
+#define JBdefaultvalue 203
+#define JBwithfield 204
 #define JBiloadw 205
 #define JBlloadw 206
 #define JBfloadw 207
@@ -243,10 +245,6 @@ extern J9_CDATA char * const sunJavaBCNames[];
 #define JBiincw 215
 #define JBaload0getfield 216
 #define JBnewdup 217
-#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
-#define JBdefaultvalue 224
-#define JBwithfield 226
-#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 #define JBreturnFromConstructor 228
 #define JBgenericReturn 229
 #define JBinvokeinterface2 231

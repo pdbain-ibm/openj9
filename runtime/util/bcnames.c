@@ -226,8 +226,8 @@ const char * const JavaBCNames[] = {
 "JBgotow" /* 200 */,
 "JBunimplemented" /* 201 */,
 "JBbreakpoint" /* 202 */,
-"JBunimplemented" /* 203 */,
-"JBunimplemented" /* 204 */,
+"JBdefaultvalue" /* 203 */,
+"JBwithfield" /* 204 */,
 "JBiloadw" /* 205 */,
 "JBlloadw" /* 206 */,
 "JBfloadw" /* 207 */,
@@ -247,15 +247,9 @@ const char * const JavaBCNames[] = {
 "JBunimplemented" /* 221 */,
 "JBunimplemented" /* 222 */,
 "JBunimplemented" /* 223 */,
-#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
-"JBdefaultvalue" /* 224 */,
-"JBunimplemented" /* 225 */,
-"JBwithfield" /* 226 */,
-#else /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 "JBunimplemented" /* 224 */,
 "JBunimplemented" /* 225 */,
 "JBunimplemented" /* 226 */,
-#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 "JBunimplemented" /* 227 */,
 "JBreturnFromConstructor" /* 228 */,
 "JBgenericReturn" /* 229 */,
@@ -491,8 +485,8 @@ const char * const sunJavaBCNames[] = {
 "JBgotow" /* 200 */,
 "JBjsrw" /* 201 */,
 "JBbreakpoint" /* 202 */,
-"JBunimplemented" /* 203 */,
-"JBunimplemented" /* 204 */,
+"JBdefaultvalue" /* 203 */,
+"JBwithfield" /* 204 */,
 "JBunimplemented" /* 205 */,
 "JBunimplemented" /* 206 */,
 "JBunimplemented" /* 207 */,
@@ -512,15 +506,9 @@ const char * const sunJavaBCNames[] = {
 "JBunimplemented" /* 221 */,
 "JBunimplemented" /* 222 */,
 "JBunimplemented" /* 223 */,
-#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
-"JBdefaultvalue" /* 224 */,
-"JBunimplemented" /* 225 */,
-"JBwithfield" /* 226 */,
-#else /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 "JBunimplemented" /* 224 */,
 "JBunimplemented" /* 225 */,
 "JBunimplemented" /* 226 */,
-#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 "JBunimplemented" /* 227 */,
 "JBunimplemented" /* 228 */,
 "JBunimplemented" /* 229 */,

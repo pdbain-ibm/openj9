@@ -226,8 +226,8 @@ const U_16 J9JavaBytecodeVerificationTable[] = {
 		0x0E85 /* JBgotow - 200 */,
 		0x1700 /* JBunimplemented - 201 */,
 		0x1700 /* JBbreakpoint - 202 */,
-		0x1700 /* JBunimplemented - 203 */,
-		0x1700 /* JBunimplemented - 204 */,
+		0x0000 /* JBdefaultvalue = 203 */ ,
+		0x0000 /* JBwithfield = 204 */ ,
 		0x1401 /* JBiloadw - 205 */,
 		0x1404 /* JBlloadw - 206 */,
 		0x1402 /* JBfloadw - 207 */,
@@ -247,15 +247,9 @@ const U_16 J9JavaBytecodeVerificationTable[] = {
 		0x1700 /* JBunimplemented - 221 */,
 		0x1700 /* JBunimplemented - 222 */,
 		0x1700 /* JBunimplemented - 223 */,
-#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
-		0x0000 /* JBdefaultvalue = 224 */ ,
-		0x1700 /* JBunimplemented - 225 */,
-		0x0000 /* JBwithfield = 226 */ ,
-#else /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 		0x1700 /* JBunimplemented - 224 */,
 		0x1700 /* JBunimplemented - 225 */,
 		0x1700 /* JBunimplemented - 226 */,
-#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 		0x1700 /* JBunimplemented - 227 */,
 		0x0F00 /* JBreturnFromConstructor - 228 */,
 		0x0F00 /* JBgenericReturn - 229 */,

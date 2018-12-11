@@ -8354,8 +8354,8 @@ public:
 #else /* DEBUG_VERSION */
 		JUMP_TABLE_ENTRY(JBunimplemented),
 #endif /* DEBUG_VERSION */
-		JUMP_TABLE_ENTRY(JBunimplemented),
-		JUMP_TABLE_ENTRY(JBunimplemented),
+		JUMP_TABLE_ENTRY(JBdefaultvalue),
+		JUMP_TABLE_ENTRY(JBwithfield),
 		JUMP_TABLE_ENTRY(JBiloadw),
 		JUMP_TABLE_ENTRY(JBlloadw),
 		JUMP_TABLE_ENTRY(JBfloadw),
@@ -8375,15 +8375,9 @@ public:
 		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBunimplemented),
-#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
-		JUMP_TABLE_ENTRY(JBdefaultvalue),
-		JUMP_TABLE_ENTRY(JBunimplemented),
-		JUMP_TABLE_ENTRY(JBwithfield),
-#else /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBunimplemented),
-#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 		JUMP_TABLE_ENTRY(JBunimplemented),
 		JUMP_TABLE_ENTRY(JBreturnFromConstructor),
 		JUMP_TABLE_ENTRY(JBgenericReturn),
