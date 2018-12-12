@@ -9821,6 +9821,17 @@ executeBytecodeFromLocal:
 		JUMP_TARGET(JBmultianewarray):
 			SINGLE_STEP();
 			PERFORM_ACTION(multianewarray(REGISTER_ARGS));
+#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
+		JUMP_TARGET(JBdefaultvalue):
+			SINGLE_STEP();
+			PERFORM_ACTION(defaultvalue(REGISTER_ARGS));
+		JUMP_TARGET(JBwithfield):
+			SINGLE_STEP();
+			PERFORM_ACTION(withfield(REGISTER_ARGS));
+#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
+		JUMP_TARGET(JBiincw):
+			SINGLE_STEP();
+			PERFORM_ACTION(iinc(REGISTER_ARGS, 2));
 		JUMP_TARGET(JBaloadw):
 		JUMP_TARGET(JBiloadw):
 		JUMP_TARGET(JBfloadw):
@@ -9839,9 +9850,6 @@ executeBytecodeFromLocal:
 		JUMP_TARGET(JBdstorew):
 			SINGLE_STEP();
 			PERFORM_ACTION(lstorew(REGISTER_ARGS));
-		JUMP_TARGET(JBiincw):
-			SINGLE_STEP();
-			PERFORM_ACTION(iinc(REGISTER_ARGS, 2));
 		JUMP_TARGET(JBreturnFromConstructor):
 			SINGLE_STEP();
 			PERFORM_ACTION(returnFromConstructor(REGISTER_ARGS));
@@ -9912,14 +9920,6 @@ executeBytecodeFromLocal:
 		JUMP_TARGET(JBimpdep2):
 			/* No single step for this bytecode */
 			PERFORM_ACTION(impdep2(REGISTER_ARGS));
-#if defined(J9VM_OPT_VALHALLA_VALUE_TYPES)
-		JUMP_TARGET(JBdefaultvalue):
-			SINGLE_STEP();
-			PERFORM_ACTION(defaultvalue(REGISTER_ARGS));
-		JUMP_TARGET(JBwithfield):
-			SINGLE_STEP();
-			PERFORM_ACTION(withfield(REGISTER_ARGS));
-#endif /* defined(J9VM_OPT_VALHALLA_VALUE_TYPES) */
 #if defined(USE_COMPUTED_GOTO)
 		cJBunimplemented:
 #else
