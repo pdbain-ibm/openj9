@@ -25,6 +25,7 @@ import static org.openj9.test.attachAPI.TestConstants.TARGET_VM_CLASS;
 import static org.testng.AssertJUnit.assertTrue;
 import static org.testng.AssertJUnit.assertEquals;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -160,7 +161,9 @@ public class TestJps extends AttachApiTest {
 	 */
 	@BeforeSuite
 	void setupSuite() {
-		commandName = JPS_COMMAND;
+		char fs = File.separatorChar;
+		commandName = System.getProperty("java.home") + fs + "bin" + fs //$NON-NLS-1$ //$NON-NLS-2$
+				+ JPS_COMMAND;
 		assertTrue("Attach API failed to launch", TargetManager.waitForAttachApiInitialization()); //$NON-NLS-1$
 		vmId = TargetManager.getVmId();
 		skipTest = !System.getProperty("java.vm.vendor").contains("OpenJ9");  //$NON-NLS-1$//$NON-NLS-2$
