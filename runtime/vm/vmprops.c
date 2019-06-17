@@ -801,6 +801,7 @@ initializeSystemProperties(J9JavaVM * vm)
 		propValue = "unknown";
 	}
 	rc = addSystemProperty(vm, "os.name", propValue, J9SYSPROP_FLAG_WRITEABLE);
+	fprintf(stderr, "%s %d PDB_DEBUG %s os.name=\n", __FILE__, __LINE__, __FUNCTION__, propValue);
 	if (J9SYSPROP_ERROR_NONE != rc) {
 		goto fail;
 	}
