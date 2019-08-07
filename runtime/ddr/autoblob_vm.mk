@@ -27,6 +27,6 @@ DISABLE_STUBS := 1
 include j9ddrautoblob.mk
 include autoblob_rules.mk
 
-generate_files : hyportddrblob.c stackwalkddrblob.c vmddrblob.c jitddrblob.c omrddrblob.c ddrcppsupportblob.cpp
+generate_files : stackwalkddrblob.c vmddrblob.c jitddrblob.c omrddrblob.c ddrcppsupportblob.cpp
 
 .PHONY : generate_files
