@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2001, 2019 IBM Corp. and others
+ * Copyright (c) 2001, 2018 IBM Corp. and others
  *
  * This program and the accompanying materials are made available under
  * the terms of the Eclipse Public License 2.0 which accompanies this
@@ -22,7 +22,6 @@
 /* create a level of indirection from the hyport to the j9 port library */
 #include <stdarg.h>
 
-#if defined(J9VM_OPT_HARMONY)
 #include "hyport.h"
 /* To prevent clashes between hyport.h and j9port.h on certain defines undef them here. */
 #undef PORT_ACCESS_FROM_ENV
@@ -2084,4 +2083,3 @@ hyport_allocate_library_maptoj9 (struct J9PortLibrary *j9PortLib, struct HyPortL
 
 	return 0;
 }
-#endif // defined(J9VM_OPT_HARMONY)
