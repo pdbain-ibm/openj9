@@ -30,8 +30,10 @@ extern "C"
 {
 #endif
 #include "jni.h"
+#if defined(J9VM_OPT_HARMONY)
 #include "hyport.h"
 #include "hyvmls.h"
+#endif // defined(J9VM_OPT_HARMONY)
  
 typedef enum
 {

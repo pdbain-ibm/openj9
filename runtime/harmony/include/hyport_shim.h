@@ -21,6 +21,7 @@
  *******************************************************************************/
 #if !defined(hyport_shim_h)
 #define hyport_shim_h
+#if defined(J9VM_OPT_HARMONY)
 #include "j9comp.h"
 #include "j9port.h"
 #include "hyport.h"
@@ -28,4 +29,5 @@
 extern J9_CFUNC I_32 
 hyport_allocate_library_maptoj9 (struct J9PortLibrary *j9PortLib, struct HyPortLibraryVersion *expectedVersion, struct HyPortLibrary **portLibrary);
 
+#endif // defined(J9VM_OPT_HARMONY)
 #endif /* hyport_shim_h */

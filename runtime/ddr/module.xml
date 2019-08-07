@@ -80,7 +80,9 @@ SPDX-License-Identifier: EPL-2.0 OR Apache-2.0 OR GPL-2.0 WITH Classpath-excepti
 			<include path="j9shrcommon"/>
 			<include path="jclcommon"/>
 			<include path="../jcl" type="relativepath"/>
-			<include path="harmony_include"/>
+			<include path="harmony_include">
+				<include-if condition="spec.flags.opt_harmony"/>
+			</include>
 			<include path="bcverify"/>
 			<include path="../compiler/runtime" type="relativepath">
 				<include-if condition="spec.flags.J9VM_INTERP_NATIVE_SUPPORT"/>
