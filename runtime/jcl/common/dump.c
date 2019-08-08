@@ -407,7 +407,7 @@ Java_com_ibm_jvm_Dump_queryDumpOptionsImpl (JNIEnv *env, jclass clazz) {
 }
 
 void JNICALL
-Java_com_ibm_jvm_Dump_resetDumpOptionsImpl (JNIEnv *env, jclass clazz)
+Java_openj9_lang_management_internal_OpenJ9DiagnosticsMXBeanImpl_resetDumpOptionsImpl(JNIEnv *env, jclass clazz)
 {
 	omr_error_t result = OMR_ERROR_NONE;
 	J9VMThread *thr = (J9VMThread *)env;
@@ -435,6 +435,11 @@ Java_com_ibm_jvm_Dump_resetDumpOptionsImpl (JNIEnv *env, jclass clazz)
 #endif
 }
 
+void JNICALL
+Java_com_ibm_jvm_Dump_resetDumpOptionsImpl(JNIEnv *env, jclass clazz)
+{
+	Java_openj9_lang_management_internal_OpenJ9DiagnosticsMXBeanImpl_resetDumpOptionsImpl(env, clazz);
+}
 /**
  * Raise exception for OMR error code that is passed in.
  * 
