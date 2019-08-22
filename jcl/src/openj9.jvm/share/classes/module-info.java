@@ -24,5 +24,6 @@
 /*[REM] This file must not use tabs because the dependency recognition code in openjdk does not support them. */
 
 module openj9.jvm {
+  requires java.management;
   exports com.ibm.jvm;
 }

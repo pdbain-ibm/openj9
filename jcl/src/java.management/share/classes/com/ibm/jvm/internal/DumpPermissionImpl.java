@@ -1,6 +1,6 @@
-/*[INCLUDE-IF Sidecar19-SE]*/
+/*[INCLUDE-IF Sidecar18-SE]*/
 /*******************************************************************************
- * Copyright (c) 2016, 2019 IBM Corp. and others
+ * Copyright (c) 2012, 2014 IBM Corp. and others
  *
  * This program and the accompanying materials are made available under
  * the terms of the Eclipse Public License 2.0 which accompanies this
@@ -21,8 +21,21 @@
  * SPDX-License-Identifier: EPL-2.0 OR Apache-2.0 OR GPL-2.0 WITH Classpath-exception-2.0 OR LicenseRef-GPL-2.0 WITH Assembly-exception
  *******************************************************************************/
 
-/*[REM] This file must not use tabs because the dependency recognition code in openjdk does not support them. */
+package com.ibm.jvm.internal;
 
-exports com.ibm.java.lang.management.internal to jdk.jcmd, jdk.management;
-exports com.ibm.jvm.internal to jdk.management, openj9.jvm;
-uses com.ibm.sharedclasses.spi.SharedClassProvider;
+import java.security.BasicPermission;
+
+/**
+ * The permission class for operations on the com.ibm.jvm.internal.Dump class.
+ * Allowing code access to this permission will allow changes to be made
+ * to system wide dump settings controlling which events cause dumps to be
+ * and allow dumps to be triggered directly.
+  */
+public class DumpPermissionImpl extends BasicPermission {
+
+	private static final long serialVersionUID = -1953206949165210492L;
+
+	public DumpPermissionImpl() {
+		super("DumpPermission"); //$NON-NLS-1$
+	}
+}
